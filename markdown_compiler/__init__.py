@@ -2,7 +2,17 @@
 Functions that work on whole documents at a time.
 All per-line work happens in compile_lines below.
 """
-from markdown_compiler.util.line_functions import *
+from markdown_compiler.util.line_functions import (
+    compile_bold_stars,
+    compile_bold_underscore,
+    compile_code_inline,
+    compile_headers,
+    compile_images,
+    compile_italic_star,
+    compile_italic_underscore,
+    compile_links,
+    compile_strikethrough,
+)
 
 
 def compile_lines(text):

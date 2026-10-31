@@ -87,7 +87,7 @@ def compile_links(line):
         k = out.find(')', j)
         if j < 0 or k < 0:
             break
-        out = out[:i] + f'<a href="{out[j+2:k]}">{out[i+1:j]}</a>' + out[k+1:]
+        out = out[:i] + f'<a href="{out[j + 2:k]}">{out[i + 1:j]}</a>' + out[k + 1:]
     return out
 
 
@@ -99,5 +99,5 @@ def compile_images(line):
         k = out.find(')', j)
         if j < 0 or k < 0:
             break
-        out = out[:i] + f'<img src="{out[j+2:k]}" alt="{out[i+2:j]}" />' + out[k+1:]
+        out = out[:i] + f'<img src="{out[j + 2:k]}" alt="{out[i + 2:j]}" />' + out[k + 1:]
     return out
