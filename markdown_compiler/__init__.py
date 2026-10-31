@@ -30,6 +30,7 @@ def compile_lines(text):
     <BLANKLINE>
     <h1> A header</h1>
     <BLANKLINE>
+    <p>
     A paragraph with a <a href="https://x">link</a>.
     </p>
     '''
@@ -98,9 +99,9 @@ def minify(html):
     'a'
     >>> minify('   a    b        c    ')
     'a b c'
-    >>> minify('a\\nb\\nc')
+    >>> minify('a\nb\nc')
     'a b c'
-    >>> minify('a \\nb\\n c')
+    >>> minify('a \nb\n c')
     'a b c'
     '''
     return ' '.join(html.split())
